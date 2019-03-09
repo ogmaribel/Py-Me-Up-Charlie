@@ -76,13 +76,24 @@ for i in range(len(votes_per_candidate)):
 
 #The winner of the election was obtained using the dictionary by checking which was the maximum number of votes
 # and then finding which candidate received those votes
-max_votes = max(d['votes'] for d in dictionary.values())
 
-print(type(max_votes))
+#####first option#####
+max_votes = max(d['votes'] for d in dictionary.values())
 for j in dictionary.values():
     if j['votes'] ==  max_votes:
         winner= j['candidate']
         break
+
+####second option#####
+# max_votes2 = 0
+# for (k,v) in dictionary.items():
+#     print(k)
+#     print(v['votes'])
+#     if int(v['votes']) >  max_votes2:
+#         max_votes2 = int(v['votes'])
+#         w= v['candidate']
+
+# print(f"ganador {w} con votos {max_votes2}")
 
 #Formating variables
 number_of_votes = format(number_of_votes,",d")
